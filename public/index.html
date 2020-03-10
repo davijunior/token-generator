@@ -1,0 +1,18 @@
+<html>
+          <head> 
+              <title> Nova imagem </title>
+          </head>
+          </body>
+              <!-- O enctype é de extrema importância! Não funciona sem! -->
+              <form action="/nova-imagem"  method="POST" enctype="multipart/form-data">
+                  <!-- O NAME do input deve ser exatamente igual ao especificado na rota -->
+                  <input type="file" name="image"><br>
+                  Nome: <input type="text" name="name"><br>
+                  Tipo: <input type="text" name="type" placeholder="Ex: Criatura - Elfo"> <br>
+                  Poder:<input type="text" name="power"><br>
+                  Resistência: <input type="text" name="thoughness"><br>
+                  Quantidade: <input type="number" name="times" min="1"><br>
+                  <button type="submit"> Enviar </button>
+              </form>
+          </body>
+      </html>
