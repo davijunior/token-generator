@@ -1,18 +1,20 @@
 <html>
           <head> 
               <title> Nova imagem </title>
+              <link rel="stylesheet" href="../stylesheets/style.css">
           </head>
           </body>
-              <!-- O enctype é de extrema importância! Não funciona sem! -->
-              <form action="/nova-imagem"  method="POST" enctype="multipart/form-data">
-                  <!-- O NAME do input deve ser exatamente igual ao especificado na rota -->
-                  <input type="file" name="image"><br>
-                  Nome: <input type="text" name="name"><br>
-                  Tipo: <input type="text" name="type" placeholder="Ex: Criatura - Elfo"> <br>
-                  Poder:<input type="text" name="power"><br>
-                  Resistência: <input type="text" name="thoughness"><br>
-                  Quantidade: <input type="number" name="times" min="1"><br>
-                  <button type="submit"> Enviar </button>
-              </form>
+              <div class="form">
+                <form action="/nova-imagem"  method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image"><br>
+                    <div class="form-content"><label for="name">Nome: </label><input type="text" name="name" class="input"></div><br>
+                    <div class="form-content"><label for="type">Tipo: </label><input type="text" name="type" placeholder="Ex: Criatura - Elfo" class="input"></div> <br>
+                    <div class="form-content"><label for="type">Texto: </label><input type="text" name="text" placeholder="Ex: Voar, Atropelar..." class="input"></div> <br>
+                    <div class="form-content"><label for="power">Poder:</label><input type="text" name="power" class="input"></div><br>
+                    <div class="form-content"><label for="thoughness">Resistência: </label><input type="text" name="thoughness" class="input"></div><br>
+                    <div class="form-content"><label for="times">Quantidade: </label><input type="number" name="times" min="1" class="input"></div><br>
+                    <button type="submit"> Enviar </button>
+                </form>
+              </div>
           </body>
       </html>
